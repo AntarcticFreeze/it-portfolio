@@ -1,0 +1,137 @@
+<!-- donate.htm -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio - Donate</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page-layout">
+            <aside class="sidebar">
+            <header>
+                <img src="img/red-tb-logo.png"
+                    alt="TB portfolio logo featuring coding and networking symbols"
+                    class="portfolio-logo">
+                <h1>My Portfolio</h1>
+                <p>Information Technology Student</p>
+            </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Resume.htm">Resume</a></li>
+                        <li><a href="Interests.htm">Interests</a></li>
+                        <li><a href="Donate.htm">Donate</a></li>
+                    </ul>
+                </nav>
+                <button type="button" id="theme-toggle">
+                    Light Mode
+                </button>
+            </aside>
+            <main class="donate-content">
+                <section>
+                    <h2>Donation Form</h2>
+                    <form id="donation-form" onsubmit="return false;">
+                        <fieldset>
+                            <legend>Title/Gender</legend>
+
+                            <div class="form-group">
+                                <input type="radio" id="ms" name="title" value="Ms" required>
+                                <label for="mr">Ms.</label>
+
+                                <input type="radio" id="mr" name="title" value="Mr">
+                                <label for="mr">Mr.</label>
+
+                                <input type="radio" id="mx" name="title" value="Mx.">
+                                <label for="mx">Mx.</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            <div class="form-group">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" required maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" required maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required maxlength="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="donation-date">Date:</label>
+                                <input type="date" id="donation-date" name="donation-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-type">Phone Type:</label>
+                                <select id="phone-type" name="phone-type" required>
+                                    <option value="">Select a phone type</option>
+                                    <option value="mobile">Mobile</option>
+                                    <option value="home">Home</option>
+                                    <option value="work">Work</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number:</label>
+                                <input type="tel" id="phone-number" name="phone-number"
+                                    placeholder="123-456-7890"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    title="Enter a phone number in the format 123-456-7890" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Payment Information</legend>
+                            <div class="form-group">
+                                <label for="donation-amount">Donation Amount ($):</label>
+                                <input type="number" id="donation-amount" name="donation-amount"
+                                    min="1" max="1000" step="0.01" placeholder="10.00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Credit Card Number:</label>
+                                <input type="text" id="card-number" name="card-number"
+                                    inputmode="numeric" pattern="[0-9]{16}" maxlength="16" placeholder="16-digit test number"
+                                    autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="security-code">Security Code:</label>
+                                <input type="text" id="security-code" name="security-code"
+                                    inputmode="numeric" pattern="[0-9]{3,4}" maxlength="4" placeholder="3 or 4 digits"
+                                    autocomplete="off" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Terms and Conditions</legend>
+
+                            <p>This donation form is merely a demonstration. No actual payments will be processed.
+                                Please do not enter real credit card information.</p>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="agree-terms"
+                                    name="agree-terms" value="yes" required>
+                                <label for="agree-terms">
+                                    I have read and agree to the terms above.
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-buttons">
+                            <button type="submit">Submit Donation</button>
+                            <button type="reset">Clear Form</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+            </footer>
+        </div>
+        <script src="script.js" defer></script>
+    </body>
+</html>
